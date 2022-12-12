@@ -1,0 +1,89 @@
+body {
+  font-family: 'Jua', sans-serif;
+  font-size: 15px;
+  background: #cedeef;
+}
+table {
+  margin: 0 auto;
+}
+th {
+padding: 10px;
+text-align: left;
+width: 200px;
+}
+td {
+  padding: 10px;
+text-align: left
+}
+#logo-img {
+  width: 200px;
+  height: 200px;
+}
+.inputbox {
+  height: 23px;
+  font-family: 'Jua', sans-serif;
+  border-color:lightgrey;
+}
+.selectbox {
+  height: 30px;
+  width: 100px;
+  font-family: 'Jua', sans-serif;
+}
+input::placeholder {
+  color: silver;
+  font-style: italic;
+}
+#home-btn {
+position: fixed;
+  top:10px;
+  right:10px;
+  background-color: steelblue;
+  color: white;
+  width: 120px;
+height: 25px;
+padding: 8px;
+color: white;
+font-family: 'Jua', sans-serif;
+font-size: 18px;
+background-color: steelblue;
+margin: 10px 10px 10px 10px;
+text-align: center
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+#submit-btn {
+margin-top: 1%;
+  background-color: steelblue;
+  color: white;
+  height: 35px;
+  width: 120px;
+  font-family: 'Jua', sans-serif;
+}
+table.first {
+  margin: 0 auto;
+  float: left
+}
+
+table.second {
+margin: 0 auto;
+  float: right
+}
+
+#home-btn {
+  position: fixed;
+  top:10px;
+  right:10px;
+  background-color: steelblue;
+  color: white;
+  width: 120px;
+  height: 25px;
+  padding: 8px;
+  color: white;
+  font-family: 'Jua', sans-serif;
+  font-size: 18px;
+  background-color: steelblue;
+  margin: 10px 10px 10px 10px;
+  text-align: center
+}
