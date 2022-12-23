@@ -67,6 +67,9 @@ function Tablescan() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'name', headerName: 'name', width: 130 },
+    { field: 'count', headerName: 'count', width: 130 },
+    { field: 'attributes', headerName: 'attributes', width: 130 },
+
     {
       field: 'fullName',
       headerName: 'Full name',
@@ -77,8 +80,35 @@ function Tablescan() {
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
     {
-      field: '속성스캔',
-      headerName: '속성스캔',
+        field: 'action',
+        headerName: 'Action',
+        sortable: false,
+        renderCell: (params) => {
+          const onClick = (e) => {
+            e.stopPropagation(); // don't select this row after clicking
+            
+            const api= params.api;
+            const thisRow= {};
+    
+            api.getAllColumns()
+              .filter((c) => c.field !== '__check__' && !!c)
+              .forEach(
+                (c) => (thisRow[c.field] = params.getValue(params.id, c.field)),
+              );  
+            datatoshow=thisRow
+            console.log(datatoshow)
+            Setgo(true)
+            //return alert(JSON.stringify(thisRow, null, 4));
+            return 
+          };
+    
+          return <Button onClick={onClick}>Click</Button>;
+        },
+      
+    },
+    {
+      field: '선택',
+      headerName: '선택',
       sortable: false,
       renderCell: (params) => {
         const onClick = (e) => {
@@ -146,8 +176,17 @@ function Tablescan() {
       },[]);
     return(
         <div style={{ height: 400, width: '100%' }}>
-          {go2&& (
+          {go&& (
             navigate('/Tablescan2', {
+              state: {
+                id: 1,
+                job: '개발자',
+                data:datatoshow
+              }
+            })
+          )}
+          {go2&& (
+            navigate('/Tablescan', {
               state: {
                 id: 1,
                 job: '개발자',

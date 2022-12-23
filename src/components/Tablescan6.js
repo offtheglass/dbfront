@@ -63,7 +63,7 @@ import {
   ];
   
   
-function Tablescan() {
+function Tablescan6() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'name', headerName: 'name', width: 130 },
@@ -77,8 +77,8 @@ function Tablescan() {
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
     {
-      field: '속성스캔',
-      headerName: '속성스캔',
+      field: '스캔결과보기',
+      headerName: '스캔결과보기',
       sortable: false,
       renderCell: (params) => {
         const onClick = (e) => {
@@ -104,6 +104,18 @@ function Tablescan() {
     
   }
   ];
+    const onclick2=()=>{
+      navigate('/Joinonetableresult', {
+        state: {
+        }
+      })
+    }
+    const onclick3=()=>{
+      navigate('/Joinmultipletableresult', {
+        state: {
+        }
+      })
+    }
     const navigate = useNavigate();
 
     
@@ -155,12 +167,16 @@ function Tablescan() {
               }
             })
           )}
+        <p>스캔완료테이블</p>
         <DataGrid
           rows={li}
           columns={columns}
           pageSize={5}
           rowsPerPageOptions={[5]}
         />
+        <Button onClick={onclick2}>단일결합결과조회</Button>;
+        <Button onClick={onclick3}>다중결합결과조회</Button>;
+
       </div>
     )
 }
@@ -169,4 +185,4 @@ function Tablescan() {
     
 
 
-export default Tablescan
+export default Tablescan6

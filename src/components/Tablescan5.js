@@ -63,7 +63,7 @@ import {
   ];
   
   
-function Tablescan() {
+function Tablescan5() {
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'name', headerName: 'name', width: 130 },
@@ -77,8 +77,8 @@ function Tablescan() {
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
     {
-      field: '속성스캔',
-      headerName: '속성스캔',
+      field: '속성편집',
+      headerName: '속성편집',
       sortable: false,
       renderCell: (params) => {
         const onClick = (e) => {
@@ -169,4 +169,4 @@ function Tablescan() {
     
 
 
-export default Tablescan
+export default Tablescan5

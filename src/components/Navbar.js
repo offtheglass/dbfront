@@ -53,22 +53,22 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='/Tablescan5' className='nav-links' onClick = {closeMobileMenu}>
                         테이블속성편집
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='/Joinonetable' className='nav-links' onClick = {closeMobileMenu}>
                         단일결합
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='/Joinmultipletable' className='nav-links' onClick = {closeMobileMenu}>
                         다중결합
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
+                        <Link to='/Tablescan6' className='nav-links' onClick = {closeMobileMenu}>
                         결과조회
                         </Link>
                     </li>

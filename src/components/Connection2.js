@@ -1,6 +1,7 @@
 import React from "react"
 import { Button} from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import { useLocation } from "react-router-dom";
 require('./Connection2.css')
 
 class Connection2 extends React.Component {
@@ -14,6 +15,7 @@ class Connection2 extends React.Component {
         this.onChange=this.onChange.bind(this)
         this.sendfile=this.sendfile.bind(this)
         }
+     
         sendfile(event){
             console.log('sendfile')
             var formdata=new FormData()
